@@ -1,0 +1,20 @@
+{
+    [
+        {
+            "id": 1,
+            "e_no": "PSI-2765",
+            "e_name": "Ashley Wallace",
+            "e_sal": 73146.0,
+            "e_mobile": "7816215973",
+            "e_city": "Hyderabad"
+        },
+        {
+            "id": 2,
+            "e_no": "PSI-1162",
+            "e_name": "Amanda Brown",
+            "e_sal": 71587.0,
+            "e_mobile": "8240882980",
+            "e_city": "San Jose"
+        }
+    ]
+}
