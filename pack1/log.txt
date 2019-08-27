@@ -1,0 +1,26 @@
+host5:106.51.41.104 is functional
+host1:192.150.1.1 is not functional
+host2:190.1.1.2 is being collecting data
+host3:8.8.8.8 functional
+host15:8.8.4.4
+host5:106.51.41.105  not functional
+host1:192.150.1.1 is now functional
+host10:106.51.41.113 is functional
+host5:106.51.41.114  is functional
+host5:106.51.41.104  not functional
+host7:202.53.8.130  is functional
+host9:192.168.171.202 is functional
+host6:209.191.122.70  is functional
+host5:106.51.41.104  not functional
+host8:209.191.88.400 is functional
+host6:125.112.257.121 is not functional
+host5:106.51.41.104  not functional
+host16:1.0.0.0 timeout
+host17:1.0.0.1 functional
+host22:1.0.1.1
+host23:1.1.1.1
+**Invalid IP Address**
+host11:125.24.157.421 is not functional
+host12:125.112.257.121 is not functional
+host13:125.332.157.121 is not functional
+host14:525.12.157.121 is not functional
