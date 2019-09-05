@@ -1,4 +1,4 @@
-import os, re
+import os, re,subprocess
 ip_list=[]
 
 class MyTest:
@@ -61,6 +61,7 @@ class MyTest:
     def pingOperation(self,ip_list):
         for ip in ip_list:
             rep=os.system("ping -i 5 "+self.returnOnlyIP(ip))
+            # rep = subprocess.Popen(['ping',self.returnOnlyIP(ip)], stdout=subprocess.PIPE)
             # rep = 1
             if rep == 0:
                 reach = "Reachable"
