@@ -19,4 +19,21 @@ def parse_json_file_data():
         for data in emp_list:
             print(data.get_no(),'\t',data.get_name(),'\t',data.get_esal(),'\t',data.get_city(),'\t',data.get_mobile())
             print('')
-parse_json_file_data()
+# parse_json_file_data()
+
+def parse_mixed_data_file():
+    data_list = []
+    with open('text_json_sample.txt', 'r') as f:
+        # print(f.readlines())
+        item = re.findall(r'{(.*?)}',str(f.readlines()), re.IGNORECASE)
+        # item = re.findall(r'{\.*',str(f.readlines()), re.IGNORECASE)
+        print(item)
+        # print(len(item))
+        for i in item:
+            i.replace('\\\n','').replace('\\\n\\','').replace(',\'\\n\\',',').replace('\\','').replace('\\t','').replace(',,',',')
+            print(i)
+            # my_dict = json.loads(i)
+            # print(my_dict)
+            # data_list.append(my_dict)
+            # print(data_list)
+parse_mixed_data_file()
