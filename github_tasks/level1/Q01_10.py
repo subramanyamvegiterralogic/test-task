@@ -62,10 +62,21 @@ def question_7():
     for item in final_list:
         print(item)
 
+def ancient_chinese_puzzle():
+    def solve(no_of_heads, no_of_legs):
+        ns = 'No Solution'
+        for i in range(1,no_of_heads+1):
+            j = no_of_heads-i
+            if 2*i+4*j == no_of_legs:
+                return i,j
+        return ns,ns
+    chickens , rabbits = solve(35 , 94)
+    print('Chickens : ',chickens, 'Rabbits : ',rabbits)
+ancient_chinese_puzzle()
 # question_1()
 # question_2()
 # question_3()
 # question_4()
 # question_5()
 # question_6()
-question_7()
+# question_7()
