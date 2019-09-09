@@ -72,11 +72,101 @@ def ancient_chinese_puzzle():
         return ns,ns
     chickens , rabbits = solve(35 , 94)
     print('Chickens : ',chickens, 'Rabbits : ',rabbits)
-ancient_chinese_puzzle()
-# question_1()
+# ancient_chinese_puzzle()
+
+def question_8():
+    str_li = raw_input('Please Take Input Data : ').split(',')
+    str_li.sort()
+    print(','.join(str_li))
+
+def question_9():
+    lines = []
+    while True:
+        s = input()
+        if s:
+            lines.append(s.upper())
+        else:
+            break
+    for seq in lines:
+        print(seq)
+
+def question_10():
+    words = list(set(str(input()).split(' ')))
+    words.sort(reverse=False)
+    print(words)
+
+def question_11():
+    value =[]
+    items = [x for x in raw_input().split(',')]
+    for p in items:
+        intp = int(p, 2)
+        if not intp % 5:
+            value.append(p)
+    print ','.join(value)
+
+def question_12():
+    li = []
+    for i in range(1000,3001,2):
+        li.append(str(i))
+    print(','.join(li))
+
+def question_13():
+    s = str(input())
+    dc = {"LETTERS":0 , "DIGITS":0}
+    for char in s:
+        if char.isalpha():
+            dc['LETTERS'] += 1
+        elif char.isdigit():
+            dc['DIGITS'] += 1
+        else:
+            pass
+    print(dc)
+
+def question_14():
+    s = str(input())
+    dc = {"UPPER CASE": 0, "LOWER CASE": 0,"TITLE CASE": 0, "DIGITS":0}
+    for char in s:
+        if char.isupper():
+            dc['UPPER CASE'] += 1
+        elif char.islower():
+            dc['LOWER CASE'] += 1
+        elif char.istitle():
+            dc['TITLE CASE'] += 1
+        elif char.isdigit():
+            dc['DIGITS'] += 1
+        else:
+            pass
+    print(dc)
+
+def question_15():
+    s = input()
+    a =s
+    outp = s+(s*s)+(s*s*s)+(s*s*s*s)
+    print(outp)
+    n1 = int("%s" % a)
+    n2 = int("%s%s" % (a, a))
+    n3 = int("%s%s%s" % (a, a, a))
+    n4 = int("%s%s%s%s" % (a, a, a, a))
+    print n1 + n2 + n3 + n4
+
+def question_16():
+    s = list(input())
+    comp_li = [x for x in s if (x%2!=0)]
+    print(comp_li)
+#
+#  question_1()
 # question_2()
 # question_3()
 # question_4()
 # question_5()
 # question_6()
 # question_7()
+# question_8()
+# question_9()
+# question_10()
+# question_11()
+# question_12()
+# question_13()
+# question_14()
+# question_15()
+question_16()
