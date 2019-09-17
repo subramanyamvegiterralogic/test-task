@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 #     if value[0] is not None:
 #         data.append(value)
 # print(data)
-# import plotly.figure_factory as ff
+import plotly.figure_factory as ff
 z = [[70, 70, 70, 20, 20, 20, 40, 40, 0, 0, 0, 0],
      [70, 70, 70, 20, 20, 20, 40, 40, 0, 0, 0, 0],
      [70, 70, 70, 45, 45, 45, 25, 25, 0, 0, 0, 0],
@@ -35,6 +35,14 @@ z_text = [['', '', '', '', '', '', '', '', 'Node JS (1)', 'Influx DB (1)','','']
           ['', '', '', '', '', '', '', '', 'Angular JS (4)', '', '', ''],
           ['','Python(16)','','','Kafka(8)','','DJango (6)','','','','','',],
           ['', '', '', '', '', '', '', '', 'Spring Boot (4)', '', '', '']]
-fig = go.Figure(data=go.Heatmap(z=z, x=x, y=y,colorscale='Greens',text=z_text))
-# fig = ff.create_annotated_heatmap(z, x=x, y=y, annotation_text=z_text, colorscale='Greens' )
+          
+text_ = [['','','','','','','','','','','','','','','','',''],
+         ['','','MySql/Postgress SQL','','','','L2/L3','','','Java','','','ELK','','','Python',''],
+         ['','','Messaging Kafka','','','','','','','','','','','','','',''],
+         ['','','Robot Framework','','','','','Kubernetes','Influx DB','Jenkins','','Dockers','','','','',''],
+         ['','','DJango','','','','','','','','','','','','IOT','','AL ML Stack'],
+         ['','','','','','','Mongo DB','','','','','','','','Angular JS','','Node JS'],
+         ['','','Spring Boot','','','','','AWS/Cloud','','','','Optical','','QA-API Automation','','QA-Web Automation','']]
+#fig = go.Figure(data=go.Heatmap(z=z, x=x, y=y,colorscale='Greens',text=z_text))
+fig = ff.create_annotated_heatmap(z, x=x, y=y, annotation_text=z_text, colorscale='Greens' )
 fig.show()
