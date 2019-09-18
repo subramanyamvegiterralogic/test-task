@@ -8,7 +8,10 @@ data_color = []
 try:
     wb = openpyxl.load_workbook('heat_map_task.xlsx')
     sheet = wb.active
-    for value in sheet.iter_rows(min_row=3, max_row=200, min_col=1, max_col=3, values_only= True):
+
+    # print (sheet.max_row)
+    # print (sheet.max_column)
+    for value in sheet.iter_rows(min_row=3, max_row=sheet.max_row, min_col=1, max_col=3, values_only= True):
         try:
             if value[0] is not None and value[1] is not None and value[2] is not None:
                 data_names.append(value[0])
@@ -23,7 +26,7 @@ try:
                     data_color.append('rgb(229,255,229)')
                 else:
                     pass
-        except Exception:
+        except Exception as e:
             continue
     # print(data_names, data_values, data_color)
     fig = go.Figure()
@@ -77,5 +80,7 @@ try:
                       annotations=annotations,
                       hovermode='closest')
     fig.show()
+except FileNotFoundError:
+    print('Seraching File Not Found')
 except Exception as e:
     print('Exception Raised')
