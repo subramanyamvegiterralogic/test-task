@@ -1,4 +1,4 @@
-import os, re,subprocess
+import os, re,subprocess, threading
 ip_list=[]
 
 class MyTest:
@@ -58,23 +58,26 @@ class MyTest:
                 f.write(data)
 
     # IP Ping Operation Implementation
-    def pingOperation(self,ip_list):
-        for ip in ip_list:
-            rep=os.system("ping -i 5 "+self.returnOnlyIP(ip))
-            # rep = subprocess.Popen(['ping',self.returnOnlyIP(ip)], stdout=subprocess.PIPE)
-            # rep = 1
-            if rep == 0:
-                reach = "Reachable"
-                print("server is up")
-            else:
-                reach = "Not Reachable"
-                print("server is down")
-            if ip in self.ip_dict.keys():
-                self.ip_dict[ip] = self.ip_dict.get(ip)+1
-            else:
-                self.ip_dict[ip] = 1
+    def startProcessing(self,ip):
+        rep=os.system("ping -i 5 "+self.returnOnlyIP(ip))
+        # rep = subprocess.Popen(['ping',self.returnOnlyIP(ip)], stdout=subprocess.PIPE)
+        # rep = 1
+        if rep == 0:
+            reach = "Reachable"
+            print("server is up")
+        else:
+            reach = "Not Reachable"
+            print("server is down")
+        if ip in self.ip_dict.keys():
+            self.ip_dict[ip] = self.ip_dict.get(ip)+1
+        else:
+            self.ip_dict[ip] = 1
             self.ip_reachable[ip] = reach
         self.writeToFile()
+
+    def pingOperation(self,ip_list):
+        for ip in ip_list:
+            threading.Thread(target=self.startProcessing(ip)).start()
 
     # Reading Data From output.txt file and Displaying on Console
     def printTextFileOutput(self):
