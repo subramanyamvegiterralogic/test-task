@@ -2,30 +2,28 @@ from tkinter import *
 import mysql.connector
 from tkinter import messagebox
 import csv
+from mini_project import database_connection
 
-
+db = database_connection.Database()
 def save_file_items_details_to_db(shop_id_txt, item_name_txt, item_amount_txt):
     try:
-        my_connect = mysql.connector.connect(host= 'localhost', user='root', password='', database='mini_project')
-        data_cursor = my_connect.cursor()
+        db.connect_db()
         query = "SELECT * FROM add_item WHERE shop_id='{}' and item_name='{}'".format(shop_id_txt,item_name_txt)
-        data_cursor.execute(query)
-        data = data_cursor.fetchall()
+        data = db.get_data_for_query(query)
         try:
             if len(data)<1:
                 query = "INSERT INTO add_item VALUES ('{}','{}','{}')".format(shop_id_txt, item_name_txt, item_amount_txt)
-                print(query)
-                data_cursor.execute(query)
+                db.insert_or_update_query(query)
             else:
                 query = "UPDATE add_item SET item_name='{}', item_amount='{}' WHERE shop_id='{}'".format(item_name_txt, item_amount_txt,shop_id_txt)
                 print(query)
-                data_cursor.execute(query)
+                db.insert_or_update_query(query)
         except Exception as e:
             print(e)
-        finally:
-            my_connect.commit()
     except Exception as e:
         print(e)
+    finally:
+        db.disconnect_db()
 
 def read_csv_file_data():
     try:
@@ -74,28 +72,20 @@ try:
             res = messagebox.askyesno('Add Item','Do you want to add this item to DB?')
             print(res)
             if res == True:
-                my_connect = mysql.connector.connect(host= 'localhost', user='root', password='', database='mini_project')
-                data_cursor = my_connect.cursor()
+                db.connect_db()
                 query = "SELECT * FROM add_item WHERE shop_id='{}' and item_name='{}'".format(shop_id_txt,item_name_txt)
-                data_cursor.execute(query)
-                data = data_cursor.fetchall()
+                data = db.get_data_for_query(query)
                 try:
                     if len(data)<1:
                         query = "INSERT INTO add_item VALUES ('{}','{}','{}')".format(shop_id_txt, item_name_txt.title(), item_amount_txt)
-                        print(query)
-                        data_cursor.execute(query)
+                        db.insert_or_update_query(query)
                         messagebox.showinfo('Add Item', "Item Added Successfully...")
                     else:
                         query = "UPDATE add_item SET item_name='{}', item_amount='{}' WHERE shop_id='{}'".format(item_name_txt, item_amount_txt,shop_id_txt)
-                        print(query)
-                        data_cursor.execute(query)
+                        db.insert_or_update_query(query)
                         messagebox.showinfo('Update Item','Item Data Updated Successfully...')
                 except Exception as e:
                     print(e)
-                finally:
-                    my_connect.commit()
-                    data_cursor.close()
-                    my_connect.close()
             else:
                 messagebox.showerror('Add Item', 'User Cancelled Adding Item')
         except Exception as e:

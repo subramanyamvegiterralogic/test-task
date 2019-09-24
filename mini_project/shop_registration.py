@@ -1,8 +1,10 @@
 import mysql.connector
 from tkinter import *
 from tkinter import messagebox
+from mini_project import database_connection
 
 try:
+    db = database_connection.Database()
     window = Tk()
     window.title('Shop Registration')
     window.geometry('600x500')
@@ -43,19 +45,16 @@ try:
         try:
             res = messagebox.askquestion('Registration', 'Do want to Register Store ?')
             if res == 'yes':
-                my_connect = mysql.connector.connect(host='localhost', database='mini_project ', user='root', password='')
-                my_cursor = my_connect.cursor()
-                my_cursor.execute('SELECT * FROM shop_registration WHERE shop_id="'+shop_id_txt+'"')
-                row_data = my_cursor.fetchall()
+                db.connect_db()
+                query = 'SELECT * FROM shop_registration WHERE shop_id="' + shop_id_txt + '"'
+                row_data = db.get_data_for_query(query)
                 if len(row_data)>0:
                     messagebox.showwarning('Registration', 'User Already Registered')
                 else:
                     try:
                         query = 'INSERT INTO shop_registration (shop_name,shop_owner_name,shop_id,gst_number,address,contact_number) VALUES ("{}","{}","{}","{}","{}","{}")'.format(shop_name_txt,shop_owner_name_txt,shop_id_txt,shop_gst_number_txt,shop_address_txt,contact_number_txt)
-                        my_cursor.execute(query)
-                        my_connect.commit()
-                        my_cursor.close()
-                        my_connect.close()
+                        db.insert_or_update_query(query)
+                        db.disconnect_db()
                         messagebox.showinfo('Registration','User Registered Successfully...!')
                     except Exception as e:
                         print(e)

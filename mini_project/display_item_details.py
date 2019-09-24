@@ -1,6 +1,34 @@
 from tkinter import *
 from tkinter import messagebox
 import mysql.connector
+from fpdf import FPDF
+import random
+import datetime
+from mini_project import database_connection
+
+
+db = database_connection.Database()
+def generate_pdf(spacing):
+    try:
+        pdf = FPDF()
+        pdf.set_font('Arial',size=12)
+        pdf.add_page()
+        col_width = pdf.w/4.5
+        row_height = pdf.font_size
+        pdf.cell(200, 5, 'V.L Super Market', ln=1, align='C')
+        pdf.cell(200, 5, 'Thanks for Shopping', ln=2, align='C')
+        pdf.cell(200, 5, 'Your Bill Details', ln=3, align='C')
+        pdf.cell(200, 5, 'Total Amount : '+str(total_payable_amount), ln=4, align='C')
+        for row in print_items_list:
+            for item in row:
+                pdf.cell(col_width,row_height*spacing, txt= item, border=1, align='C')
+            pdf.ln(row_height*spacing)
+        pdf.output('transaction.pdf')
+        messagebox.showinfo('PDF Generation','PDF Generated Successfully...')
+    except Exception as e:
+        messagebox.showerror('PDF Generation','Print Generation Failed Please Try again...')
+        print(e)
+        # pass
 
 try:
     items_prices = dict()
@@ -10,11 +38,9 @@ try:
     window.geometry('1000x1000')
     def read_items_details():
         try:
-            my_connect = mysql.connector.connect(host='localhost', database='mini_project', user='root', password='')
-            cursor = my_connect.cursor()
+            db.connect_db()
             query = "SELECT a.item_name,a.item_amount FROM add_item as a LEFT JOIN shop_registration as r ON a.shop_id=r.shop_id WHERE r.shop_name ='V.L Super Market'"
-            cursor.execute(query)
-            db_data = cursor.fetchall()
+            db_data = db.get_data_for_query(query)
             items_prices = dict(db_data)
             i=0
 
@@ -40,17 +66,46 @@ try:
                     messagebox.showerror('Add To Cart', 'Something wnt wrong, Please try again later')
                     print(e)
 
+            def save_customer_transaction_to_db(transaction_id, transaction_amount, transaction_date):
+                try:
+                    query = "INSERT INTO user_transaction (transaction_id, transaction_amount, transaction_date) VALUES ('{}','{}','{}')".format(transaction_id,transaction_amount,transaction_date)
+                    db.insert_or_update_query(query)
+                except Exception as e:
+                    print(e)
+                    generate_transaction_id()
+
+            def generate_transaction_id():
+                try:
+                    transaction_id=''
+                    for num in range(0,10):
+                        transaction_id += str(random.randint(0,9))
+                    print(transaction_id)
+                    save_customer_transaction_to_db(transaction_id, total_payable_amount, datetime.datetime.now().strftime("%Y-%m-%d"))
+                except Exception as e:
+                    print(e)
             def print_clicked():
-                pass
+                generate_transaction_id()
+                # generate_pdf(1)
 
             def submit_cart_items_clicked():
                 total_cart_amount = 0
+                global print_items_list
+                print_items_list = [['Item Name', 'Item Price', 'Item Quantity', 'Amount']]
                 if len(items_quantity_cart)<1:
                     messagebox.showerror('Submit Cart','Empty Cart Could not be processed')
                     return
                 else:
                     for key in items_quantity_cart.keys():
+                        temp = []
                         total_cart_amount += (int(items_quantity_cart[key]) * int(items_prices[key]))
+                        temp.append(key)
+                        temp.append(items_prices[key])
+                        temp.append(items_quantity_cart[key])
+                        temp.append(str(int(items_quantity_cart[key]) * int(items_prices[key])))
+                        print_items_list.append(temp)
+                global total_payable_amount
+                total_payable_amount = total_cart_amount
+
                 total_cart_amount_label = Label(window,text='Your Cart Amount is :₹ {}'.format(total_cart_amount),font=('Arial bold', 20))
                 total_cart_amount_label.grid(row=35, column=3)
                 print_bt = Button(window, text='Print', bg='black', fg='white',
