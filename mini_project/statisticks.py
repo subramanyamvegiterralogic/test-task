@@ -41,6 +41,6 @@ class GraphicalRepresentation:
             print(e)
         finally:
             db.disconnect_db()
-gr = GraphicalRepresentation()
+# gr = GraphicalRepresentation()
 # t1=threading.Thread(target=gr.statistic_line_representation()).start()
-t2=threading.Thread(target=gr.bar_chart_representation()).start()
+# t2=threading.Thread(target=gr.bar_chart_representation()).start()

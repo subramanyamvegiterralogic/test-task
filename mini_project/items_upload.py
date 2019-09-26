@@ -52,7 +52,7 @@ def item_upload_process():
     try:
         window = Tk()
         window.title('Add/Update Shop Items')
-        window.geometry('600x500')
+        window.geometry('650x200')
         shop_id_lbl = Label(window, text='Shop ID : ', font=('Arial bold', 10))
         shop_id_lbl.grid(row=0, column=0)
         shop_id = Entry(window, width=50)
@@ -115,13 +115,13 @@ def item_upload_process():
             except Exception as e:
                 print(e)
 
-        btn = Button(window, text='Add Item', bg='black', fg='white', font=('Arial bold', 15),
+        btn = Button(window, text='Add Item', bg='green', fg='white', font=('Arial bold', 15),
                      command=add_item_clicked)
         btn.grid(row=7, column=1)
         window.mainloop()
     except Exception as e:
         print(e)
 
-upload = FileItemsUpload()
-upload.read_csv_file_data()
-item_upload_process()
+# upload = FileItemsUpload()
+# upload.read_csv_file_data()
+# item_upload_process()
