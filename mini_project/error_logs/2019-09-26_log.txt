@@ -1,0 +1,12 @@
+2019-09-26 17:30:26.306944 : D:/PSI-1931/mytest/mini_project/index.py : complex() arg is a malformed string
+2019-09-26 17:30:54.219697 : D:/PSI-1931/mytest/mini_project/index.py : invalid literal for int() with base 10: 'ten'
+2019-09-26 17:31:08.754984 : D:/PSI-1931/mytest/mini_project/index.py : division by zero
+2019-09-26 17:48:08.093590 : D:/PSI-1931/mytest/mini_project/index.py : 'DisplayItemDetails' object has no attribute 'error'
+2019-09-26 17:48:32.802075 : D:/PSI-1931/mytest/mini_project/index.py : 'DisplayItemDetails' object has no attribute 'error'
+2019-09-26 17:48:37.283247 : D:/PSI-1931/mytest/mini_project/index.py : 'FileItemsUpload' object has no attribute 'error_log'
+2019-09-26 17:50:26.850787 : D:/PSI-1931/mytest/mini_project/index.py : 'FileItemsUpload' object has no attribute 'error_log'
+2019-09-26 17:51:29.439080 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-09-26 17:51:29.440081 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-09-26 17:51:29.440081 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-09-26 17:51:29.441082 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-09-26 17:51:29.441082 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range

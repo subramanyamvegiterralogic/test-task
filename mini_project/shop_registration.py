@@ -1,7 +1,8 @@
 import mysql.connector
 from tkinter import *
 from tkinter import messagebox
-from mini_project import database_connection
+from mini_project import database_connection, error_logger
+import re
 
 class ShopRegistration:
     def __init__(self):
@@ -9,6 +10,7 @@ class ShopRegistration:
         self.window = Tk()
         self.window.title('Shop Registration')
         self.window.geometry('650x200')
+        self.error_log = error_logger.ReportError()
 
     def save_store_details_to_db(self, shop_name_txt, shop_owner_name_txt, shop_id_txt, shop_gst_number_txt,
                                  shop_address_txt,  contact_number_txt):
@@ -29,13 +31,13 @@ class ShopRegistration:
                         self.db.disconnect_db()
                         messagebox.showinfo('Registration', 'User Registered Successfully...!')
                     except Exception as e:
-                        print(e)
+                        self.error_log.report_error_log(__file__, e.__str__())
             else:
                 messagebox.showerror('Registration', 'Registration Cancelled by User')
 
         except Exception as e:
             messagebox.showerror('Registration', 'Registration Failed Please Try again later')
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 
     def show_custom_alert(self,message_text):
         messagebox.showwarning('Registaration', message_text)
@@ -54,12 +56,12 @@ class ShopRegistration:
             self.show_custom_alert('Shop Owner Name Should Not be Empty')
         elif len(shop_id_txt) < 1:
             self.show_custom_alert('Shop ID Should Not be Empty')
-        elif len(shop_gst_number_txt) < 1:
-            self.show_custom_alert('Shop GST number Should Not be Empty')
+        elif re.fullmatch('\w{15}',shop_gst_number_txt) == None:#len(shop_gst_number_txt) < 1:
+            self.show_custom_alert('Please Enter Valid Shop GST number')
         elif len(shop_address_txt) < 1:
             self.show_custom_alert('Shop Address Should Not be Empty')
-        elif len(contact_number_txt) < 1:
-            self.show_custom_alert('Contact Number Should Not be Empty')
+        elif re.fullmatch('(0|91)?[6-9][0-9]{9}',contact_number_txt) == None:#len(contact_number_txt) < 1:
+            self.show_custom_alert('Please Enter Valid Contact Number')
         else:
             self.save_store_details_to_db(shop_name_txt, shop_owner_name_txt, shop_id_txt, shop_gst_number_txt,
                                      shop_address_txt, contact_number_txt)
@@ -102,6 +104,6 @@ class ShopRegistration:
 
             self.window.mainloop()
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 # shop_register = ShopRegistration()
 # shop_register.create_ui()

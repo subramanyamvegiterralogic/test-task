@@ -4,7 +4,7 @@ import mysql.connector
 from fpdf import FPDF
 import random
 import datetime
-from mini_project import database_connection, working_with_mongo
+from mini_project import database_connection, working_with_mongo,send_email, error_logger
 
 class DisplayItemDetails:
     def __init__(self):
@@ -12,6 +12,7 @@ class DisplayItemDetails:
         self.window = Tk()
         self.window.title('Purchase Items')
         self.window.geometry('700x900')
+        self.error_log = error_logger.ReportError()
 
     def submit_cart_items_clicked(self):
         total_cart_amount = 0
@@ -60,10 +61,10 @@ class DisplayItemDetails:
                 messagebox.showinfo('Add To Cart', 'Item Added to Cart Successfully...')
         except ValueError as e:
             messagebox.showerror('Add To Cart', 'Item Quantity should be in Number format only')
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
         except Exception as e:
             messagebox.showerror('Add To Cart', 'Something wnt wrong, Please try again later')
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 
     def save_customer_transaction_to_db(self,transaction_id, transaction_amount, transaction_date):
         try:
@@ -72,7 +73,7 @@ class DisplayItemDetails:
             self.db.insert_or_update_query(query)
             return transaction_id
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
             self.generate_transaction_id()
 
     def save_selected_items_to_mongo(self, transaction_id):
@@ -97,7 +98,7 @@ class DisplayItemDetails:
             else:
                 mongo_ref.insert_one_record_into_collection(mongo_data_list[0])
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 
 
     def generate_transaction_id(self):
@@ -110,7 +111,7 @@ class DisplayItemDetails:
                                             datetime.datetime.now().strftime("%Y-%m-%d"))
             self.save_selected_items_to_mongo(transaction_id)
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 
 
     def generate_pdf(self, spacing, transaction_id):
@@ -137,9 +138,11 @@ class DisplayItemDetails:
             messagebox.showinfo('Transaction',
                                 'Your Transaction is Successful with transation number : {}, Thanks for Shopping, Please Visit Again'.format(
                                     transaction_id))
+            mail = send_email.Transaction_email()
+            mail.send_mail('sourabhnath.a@terralogic.com',file_name)
         except Exception as e:
             messagebox.showerror('PDF Generation', 'Print Generation Failed Please Try again...')
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 
     def print_clicked(self):
         self.generate_transaction_id()
@@ -173,7 +176,7 @@ class DisplayItemDetails:
                                          command=self.submit_cart_items_clicked)
             self.submit_cart_item_bt.grid(row=i, column=3)
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 
     def display_details(self):
         try:
@@ -182,4 +185,4 @@ class DisplayItemDetails:
             self.read_items_details()
             self.window.mainloop()
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())

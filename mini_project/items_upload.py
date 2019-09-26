@@ -2,10 +2,10 @@ from tkinter import *
 import mysql.connector
 from tkinter import messagebox
 import csv
-from mini_project import database_connection
+from mini_project import database_connection, error_logger
 
 db = database_connection.Database()
-
+error_log = error_logger.ReportError()
 class FileItemsUpload:
     def save_file_items_details_to_db(self,shop_id_txt, item_name_txt, item_amount_txt):
         try:
@@ -23,9 +23,9 @@ class FileItemsUpload:
                     print(query)
                     db.insert_or_update_query(query)
             except Exception as e:
-                print(e)
+                error_log.report_error_log(__file__, e.__str__())
         except Exception as e:
-            print(e)
+            error_log.report_error_log(__file__, e.__str__())
         finally:
             db.disconnect_db()
 
@@ -38,14 +38,16 @@ class FileItemsUpload:
                         print(row)
                         self.save_file_items_details_to_db(row[0], row[1], row[2])
                     except Exception as e:
-                        print(e)
+                        error_log.report_error_log(__file__, e.__str__())
                         continue
         except FileNotFoundError as fne:
             print(fne)
+            error_log.report_error_log(__file__, fne.__str__())
         except FileExistsError as fee:
             print(fee)
+            error_log.report_error_log(__file__, fee.__str__())
         except Exception as e:
-            print(e)
+            error_log.report_error_log(__file__, e.__str__())
 
 
 def item_upload_process():
@@ -93,11 +95,11 @@ def item_upload_process():
                             db.insert_or_update_query(query)
                             messagebox.showinfo('Update Item', 'Item Data Updated Successfully...')
                     except Exception as e:
-                        print(e)
+                        error_log.report_error_log(__file__, e.__str__())
                 else:
                     messagebox.showerror('Add Item', 'User Cancelled Adding Item')
             except Exception as e:
-                print(e)
+                error_log.report_error_log(__file__, e.__str__())
 
         def add_item_clicked():
             try:
@@ -113,14 +115,14 @@ def item_upload_process():
                 else:
                     save_store_items_details_to_db(shop_id_txt, item_name_txt, item_amount_txt)
             except Exception as e:
-                print(e)
+                error_log.report_error_log(__file__, e.__str__())
 
         btn = Button(window, text='Add Item', bg='green', fg='white', font=('Arial bold', 15),
                      command=add_item_clicked)
         btn.grid(row=7, column=1)
         window.mainloop()
     except Exception as e:
-        print(e)
+        error_log.report_error_log(__file__, e.__str__())
 
 # upload = FileItemsUpload()
 # upload.read_csv_file_data()

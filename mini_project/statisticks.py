@@ -1,9 +1,11 @@
 import plotly.graph_objects as go
-from mini_project import database_connection
+from mini_project import database_connection, error_logger
 import datetime
 import threading
 db = database_connection.Database()
 class GraphicalRepresentation:
+    def __init__(self):
+        self.error_log = error_logger.ReportError()
     def bar_chart_representation(self):
         try:
             db.connect_db()
@@ -20,7 +22,7 @@ class GraphicalRepresentation:
             fig = go.Figure([go.Bar(x=x, y=y)])
             fig.show()
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
         finally:
             db.disconnect_db()
 
@@ -38,7 +40,7 @@ class GraphicalRepresentation:
             fig = go.Figure(data=[go.Scatter(x=x,y=y)])
             fig.show()
         except Exception as e:
-            print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
         finally:
             db.disconnect_db()
 # gr = GraphicalRepresentation()
