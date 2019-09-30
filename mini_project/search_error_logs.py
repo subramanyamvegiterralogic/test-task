@@ -14,6 +14,7 @@ class SearchErrorLogs:
 
     def create_ui(self):
         try:
+            self.get_error_from_file()
             self.date_lbl = Label(self.window, text='Date To Search : ', font=('Arial bold', 10))
             self.date_lbl.grid(row=0, column=0)
             self.date_entry = Entry(self.window, width=50)
@@ -31,6 +32,27 @@ class SearchErrorLogs:
             self.window.mainloop()
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
+
+    def get_error_from_file(self):
+        try:
+            # search_date = input('Enter Date To Search \t:\t')
+            # hour_of_the_day = input('Enter On which Hour You Want See Exceptions  : ')
+            search_date = '2019-09-27'
+            hour_of_the_day = '2019-09-27 10'
+            end_time = '2019-09-27 11'
+            error_dir_name = 'error_logs/'
+            error_file_name = error_dir_name + search_date + "_log.txt"
+            buffer = []
+            with open(os.path.abspath(error_file_name), 'r') as read_f:
+                for line in read_f:
+                    if line.startswith(hour_of_the_day):
+                        buffer.append(line)
+                    elif line.startswith(end_time):
+                        pass
+            print(buffer)
+            print(len(buffer))
+        except Exception as e:
+            print(e)
 
     def get_error_from_log_file(self):
         try:

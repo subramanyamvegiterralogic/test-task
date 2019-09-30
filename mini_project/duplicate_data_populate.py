@@ -17,13 +17,15 @@ def generate_transaction_id():
         return transaction_id
     except Exception as e:
         print(e)
+
 my_connection = mysql.connector.connect(host='localhost', database='mini_project', user='root',password='')
 my_cursor = my_connection.cursor()
-for i in range (0,100):
+for i in range(0,30):
     transaction_id = generate_transaction_id()
-    transaction_amount = random.randint(1,100000)
+    transaction_amount = random.randint(1, 100000)
     transaction_date = random.choice(date_list)
-    query = "INSERT INTO user_transaction VALUES ('{}','{}','{}')".format(transaction_id, transaction_amount, transaction_date)
+    query = "INSERT INTO user_transaction VALUES ('{}','{}','{}')".format(transaction_id, transaction_amount,
+                                                                              transaction_date)
     my_cursor.execute(query)
     print(i)
 my_connection.commit()
