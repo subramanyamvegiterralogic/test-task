@@ -1,13 +1,13 @@
 from tkinter import *
 from tkinter import messagebox
-from mini_project import statisticks, shop_registration, display_item_details, error_logger
+from mini_project import statisticks, shop_registration, display_item_details, error_logger, search_error_logs
 from mini_project.items_upload import FileItemsUpload, item_upload_process
 
 class Index:
     def __init__(self):
         self.window = Tk()
         self.window.title('Shop Index Page')
-        self.window.geometry('650x200')
+        self.window.geometry('800x250')
         self.error_log = error_logger.ReportError()
 
     def register_clicked(self):
@@ -44,6 +44,13 @@ class Index:
             self.window.quit()
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
+    def error_logs_clicked(self):
+        try:
+            search_error = search_error_logs.SearchErrorLogs()
+            search_error.create_ui()
+            self.window.quit()
+        except Exception as e:
+            self.error_log.report_error_log(__file__, e.__str__())
 
     def create_ui(self):
         try:
@@ -55,6 +62,8 @@ class Index:
             display_item_details_btn.grid(row=2 ,column=3)
             statistics_btn = Button(self.window, text='Recent Statisticks', bg='red', fg='white',font=('Arial Bold',15), command=self.stitisticks_clicked)
             statistics_btn.grid(row=3 ,column=4)
+            statistics_btn = Button(self.window, text='Error Logs', bg='dark red', fg='white', font=('Arial Bold', 15), command=self.error_logs_clicked)
+            statistics_btn.grid(row=4, column=5)
             self.window.mainloop()
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
