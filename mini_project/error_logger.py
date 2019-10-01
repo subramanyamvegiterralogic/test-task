@@ -11,6 +11,6 @@ class ReportError:
             error_date_time = str(datetime.datetime.now())+' : '
             with open(self.error_dir_name+'/'+self.file_name, 'a') as error_file:
                 error_file.writelines(error_date_time +error_raised_file_name +" : "+ error+'\n')
-                print('Error written in File')
+                # print('Error written in File')
         except Exception as e:
             print(e)

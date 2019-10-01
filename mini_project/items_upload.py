@@ -1,8 +1,10 @@
 from tkinter import *
 import mysql.connector
 from tkinter import messagebox
-import csv
+import csv, os, time
 from mini_project import database_connection, error_logger
+import pandas as pd
+from threading import *
 
 db = database_connection.Database()
 error_log = error_logger.ReportError()
@@ -20,14 +22,13 @@ class FileItemsUpload:
                 else:
                     query = "UPDATE add_item SET item_name='{}', item_amount='{}' WHERE shop_id='{}'".format(
                         item_name_txt, item_amount_txt, shop_id_txt)
-                    print(query)
                     db.insert_or_update_query(query)
             except Exception as e:
                 error_log.report_error_log(__file__, e.__str__())
         except Exception as e:
             error_log.report_error_log(__file__, e.__str__())
-        finally:
-            db.disconnect_db()
+        # finally:
+        #     db.disconnect_db()
 
     def read_csv_file_data(self):
         try:
@@ -35,11 +36,12 @@ class FileItemsUpload:
                 data = csv.reader(f)
                 for row in data:
                     try:
-                        print(row)
                         self.save_file_items_details_to_db(row[0], row[1], row[2])
                     except Exception as e:
                         error_log.report_error_log(__file__, e.__str__())
                         continue
+                    print(current_thread().getName())
+                    # time.sleep(2)
         except FileNotFoundError as fne:
             print(fne)
             error_log.report_error_log(__file__, fne.__str__())
@@ -49,6 +51,39 @@ class FileItemsUpload:
         except Exception as e:
             error_log.report_error_log(__file__, e.__str__())
 
+    def read_excel_file_data(self):
+        try:
+            data = pd.read_excel(os.path.abspath('add_items.xls'), sheet_name='Sheet1')
+            shop_id = data['shop_id']
+            item_name = data['item_name']
+            item_amount = data['item_amount']
+            for s_id, name, amount in zip(shop_id, item_name, item_amount):
+                try:
+                    id_flag, name_flag, amount_flag = False, False, False
+                    if ((len(s_id.strip())>0 and s_id is not None)):
+                        id_flag = True
+                    if (len(name.strip())>0 and name is not None):
+                        name_flag = True
+                    if (str(amount).lower() !='nan'):
+                        amount_flag = True
+
+                    if (id_flag and name_flag and amount_flag):
+                        self.save_file_items_details_to_db(s_id, name, amount)
+                        print(current_thread().getName())
+                    else:
+                        continue
+                except Exception as e:
+                    error_log.report_error_log(__file__, e.__str__())
+                    continue
+                # time.sleep(2)
+        except FileNotFoundError as fne:
+            print(fne)
+            error_log.report_error_log(__file__, fne.__str__())
+        except FileExistsError as fee:
+            print(fee)
+            error_log.report_error_log(__file__, fee.__str__())
+        except Exception as e:
+            error_log.report_error_log(__file__, e.__str__())
 
 def item_upload_process():
     try:

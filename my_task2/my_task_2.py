@@ -12,6 +12,7 @@ try:
     # print (sheet.max_row)
     # print (sheet.max_column)
     for value in sheet.iter_rows(min_row=3, max_row=sheet.max_row, min_col=1, max_col=3, values_only= True):
+        print(value)
         try:
             if value[0] is not None and value[1] is not None and value[2] is not None:
                 data_names.append(value[0])

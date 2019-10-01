@@ -1,7 +1,9 @@
 import mysql.connector
-
+from mini_project import error_logger
 class Database():
 
+    def __init__(self):
+        self.error_log = error_logger.ReportError()
     # Connecting Database Connection
     def connect_db(self):
         try:
@@ -11,7 +13,8 @@ class Database():
             my_cursor = my_connect.cursor()
             return my_cursor
         except Exception as e:
-            print(e)
+            # print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
             return None
 
 
@@ -21,7 +24,8 @@ class Database():
             my_cursor.close()
             my_connect.close()
         except Exception as e:
-            print(e)
+            # print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
 
     # Common Select Query for All Methods
     def get_data_for_query(self, query):
@@ -29,7 +33,8 @@ class Database():
             my_cursor.execute(query)
             return my_cursor.fetchall()
         except Exception as e:
-            print(e)
+            # print(e)
+            self.error_log.report_error_log(__file__, e.__str__())
             return None
 
     # Common Insert/Update Query for all methods
@@ -38,4 +43,5 @@ class Database():
             my_cursor.execute(query)
             my_connect.commit()
         except Exception as e:
-            print(e)
+            # print(e)
+            self.error_log.report_error_log(__file__, e.__str__())

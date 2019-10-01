@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 from mini_project import statisticks, shop_registration, display_item_details, error_logger, search_error_logs
 from mini_project.items_upload import FileItemsUpload, item_upload_process
+from threading import *
 
 class Index:
     def __init__(self):
@@ -22,7 +23,8 @@ class Index:
     def items_upload_clicked(self):
         try:
             upload = FileItemsUpload()
-            upload.read_csv_file_data()
+            Thread(target=upload.read_excel_file_data, name='XLS Thread').start()
+            Thread(target=upload.read_csv_file_data, name='CSV Thread').start()
             item_upload_process()
             self.window.quit()
         except Exception as e:
