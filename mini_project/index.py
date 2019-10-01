@@ -3,6 +3,7 @@ from tkinter import messagebox
 from mini_project import statisticks, shop_registration, display_item_details, error_logger, search_error_logs
 from mini_project.items_upload import FileItemsUpload, item_upload_process
 from threading import *
+from datetime import datetime
 
 class Index:
     def __init__(self):
@@ -23,8 +24,13 @@ class Index:
     def items_upload_clicked(self):
         try:
             upload = FileItemsUpload()
-            Thread(target=upload.read_excel_file_data, name='XLS Thread').start()
+            print('Before Calling CSV : ',datetime.now())
             Thread(target=upload.read_csv_file_data, name='CSV Thread').start()
+            # upload.read_csv_file_data()
+            print('After Calling CSV and Before Calling Excel : ',datetime.now())
+            # upload.read_excel_file_data()
+            Thread(target=upload.read_excel_file_data, name='XLS Thread').start()
+            print('After Calling Excel : ',datetime.now())
             item_upload_process()
             self.window.quit()
         except Exception as e:
@@ -42,8 +48,12 @@ class Index:
     def stitisticks_clicked(self):
         try:
             data_statisticks = statisticks.GraphicalRepresentation()
-            data_statisticks.bar_chart_representation()
-            self.window.quit()
+            # data_statisticks.bar_chart_representation()
+            Thread(target=data_statisticks.bar_chart_representation, name='bar_thread').start()
+            Thread(target=data_statisticks.statistic_line_representation, name='line_thread').start()
+            Thread(target=data_statisticks.statistic_pie_chart_representation, name='pie_chart_thread').start()
+            # Thread(target=data_statisticks.statistic_tree_map(), name='tree_thread').start()
+            # self.window.quit()
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
     def error_logs_clicked(self):
@@ -62,7 +72,7 @@ class Index:
             items_upload_btn.grid(row=1 ,column=2)
             display_item_details_btn = Button(self.window, text='Items in Store', bg='orange', fg='white',font=('Arial Bold',15), command=self.display_item_details_clicked)
             display_item_details_btn.grid(row=2 ,column=3)
-            statistics_btn = Button(self.window, text='Recent Statisticks', bg='red', fg='white',font=('Arial Bold',15), command=self.stitisticks_clicked)
+            statistics_btn = Button(self.window, text='Recent Statisticks', bg='pink', fg='white',font=('Arial Bold',15), command=self.stitisticks_clicked)
             statistics_btn.grid(row=3 ,column=4)
             statistics_btn = Button(self.window, text='Error Logs', bg='dark red', fg='white', font=('Arial Bold', 15), command=self.error_logs_clicked)
             statistics_btn.grid(row=4, column=5)

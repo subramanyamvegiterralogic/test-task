@@ -3,11 +3,17 @@ from tkinter import messagebox
 import mysql.connector
 from fpdf import FPDF
 import random
-import datetime
+import datetime, threading
 from mini_project import database_connection, working_with_mongo,send_email, error_logger
 
 class DisplayItemDetails:
     def __init__(self):
+        self.emails_list = ['v.subramanyam586@gmail.com',
+                            'subramanyam.cse.86@gmail.com',
+                            # 'vegisubramanyam@gmail.com',
+                            'subramanyam.hyd.act@gmail.com',
+                            'subramanyam.vegi@terralogic.com',
+                            'python.developer.subramanyam@gmail.com']
         self.db = database_connection.Database()
         self.window = Tk()
         self.window.title('Purchase Items')
@@ -24,23 +30,23 @@ class DisplayItemDetails:
         else:
             for key in self.items_quantity_cart.keys():
                 temp = []
-                total_cart_amount += (int(self.items_quantity_cart[key]) * int(self.items_prices[key]))
+                total_cart_amount += (eval(self.items_quantity_cart[key]) * eval(self.items_prices[key]))
                 temp.append(key)
                 temp.append(self.items_prices[key])
                 temp.append(self.items_quantity_cart[key])
-                temp.append(str(int(self.items_quantity_cart[key]) * int(self.items_prices[key])))
+                temp.append(str(eval(self.items_quantity_cart[key]) * eval(self.items_prices[key])))
                 print_items_list.append(temp)
         global total_payable_amount
         total_payable_amount = total_cart_amount
 
         self.total_cart_amount_label = Label(self.window,
-                                        text='Your Cart Amount is :₹ {}'.format(total_cart_amount),
-                                        font=('Arial bold', 20))
-        self.total_cart_amount_label.grid(row=35, column=3)
+                                             text='Your Cart Amount is :₹ {}'.format(total_cart_amount),
+                                             font=('Arial bold', 20))
+        self.total_cart_amount_label.grid(row=25, column=3)
         self.print_bt = Button(self.window, text='Print', bg='orange', fg='white',
-                          font=('Arial bold', 10),
-                          command=self.print_clicked)
-        self.print_bt.grid(row=37, column=3)
+                               font=('Arial bold', 10),
+                               command=self.print_clicked)
+        self.print_bt.grid(row=26, column=3)
 
 
     def add_to_cart_clicked(self):
@@ -67,17 +73,22 @@ class DisplayItemDetails:
             self.error_log.report_error_log(__file__, e.__str__())
 
     def save_customer_transaction_to_db(self,transaction_id, transaction_amount, transaction_date):
+        print('TIME : 1 : ', datetime.datetime.now())
         try:
             query = "INSERT INTO user_transaction (transaction_id, transaction_amount, transaction_date) VALUES ('{}','{}','{}')".format(
                 transaction_id, transaction_amount, transaction_date)
             self.db.insert_or_update_query(query)
+            print('TIME : 2.1 : ', datetime.datetime.now())
             return transaction_id
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
             self.generate_transaction_id()
+            print('TIME : 2.2 : ', datetime.datetime.now())
+
 
     def save_selected_items_to_mongo(self, transaction_id):
         try:
+            print('TIME : 3 : ',datetime.datetime.now())
             mongo_ref = working_with_mongo.MongoOperations()
             mongo_data_list = []
             for item in print_items_list:
@@ -99,6 +110,8 @@ class DisplayItemDetails:
                 mongo_ref.insert_one_record_into_collection(mongo_data_list[0])
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
+        print('TIME : 4 : ', datetime.datetime.now())
+
 
 
     def generate_transaction_id(self):
@@ -107,9 +120,13 @@ class DisplayItemDetails:
             transaction_id=''
             for num in range(0, 10):
                 transaction_id += str(random.randint(0, 9))
-            self.save_customer_transaction_to_db(transaction_id, total_payable_amount,
-                                            datetime.datetime.now().strftime("%Y-%m-%d"))
-            self.save_selected_items_to_mongo(transaction_id)
+            # self.save_customer_transaction_to_db(transaction_id, total_payable_amount,
+            #                                                              datetime.datetime.now().strftime("%Y-%m-%d"))
+            threading.Thread(target=self.save_customer_transaction_to_db,args=(transaction_id, total_payable_amount,
+                                                                         datetime.datetime.now().strftime("%Y-%m-%d"),),
+                             name='my_sql_thread').start()
+            # self.save_selected_items_to_mongo(transaction_id)
+            threading.Thread(target=self.save_selected_items_to_mongo, args=(transaction_id,), name='mongo_db_thread').start()
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
 
@@ -130,8 +147,8 @@ class DisplayItemDetails:
                 for item in row:
                     pdf.cell(col_width, row_height * spacing, txt=item, border=1, align='C')
                 pdf.ln(row_height * spacing)
-            file_name = 'pdf_files/'\
-                        +datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S_')\
+            file_name = 'pdf_files/' \
+                        +datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S_') \
                         +transaction_id+'.pdf'
             pdf.output(file_name)
             messagebox.showinfo('PDF Generation', 'PDF Generated Successfully...')
@@ -139,7 +156,15 @@ class DisplayItemDetails:
                                 'Your Transaction is Successful with transation number : {}, Thanks for Shopping, Please Visit Again'.format(
                                     transaction_id))
             mail = send_email.Transaction_email()
-            mail.send_mail('sourabhnath.a@terralogic.com',file_name)
+            # mail.send_mail('subramanyam.cse.86@gmail.com',file_name)
+            for to_email in self.emails_list:
+                try:
+                    threading.Thread(target=mail.send_mail, args=(to_email,file_name), name='sending_to_{}'.format(to_email)).start()
+                    print(threading.current_thread().getName())
+                    print(threading.enumerate())
+                except:
+                    self.error_log.report_error_log(__file__, e.__str__())
+                    continue
         except Exception as e:
             messagebox.showerror('PDF Generation', 'Print Generation Failed Please Try again...')
             self.error_log.report_error_log(__file__, e.__str__())
@@ -168,12 +193,12 @@ class DisplayItemDetails:
             self.item_quantity = Entry(self.window, text='')
             self.item_quantity.grid(row=i, column=3)
             self.add_to_cart_bt = Button(self.window, text='Add To Cart', bg='orange', fg='white', font=('Arial bold', 10),
-                                    command=self.add_to_cart_clicked)
+                                         command=self.add_to_cart_clicked)
             i += 3
             self.add_to_cart_bt.grid(row=i, column=1)
             self.submit_cart_item_bt = Button(self.window, text='Submit Cart Items', bg='orange', fg='white',
-                                         font=('Arial bold', 10),
-                                         command=self.submit_cart_items_clicked)
+                                              font=('Arial bold', 10),
+                                              command=self.submit_cart_items_clicked)
             self.submit_cart_item_bt.grid(row=i, column=3)
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())

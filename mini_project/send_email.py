@@ -54,5 +54,7 @@ class Transaction_email:
 
             # Terminating the session
             s.quit()
+
+            print('Email Sending Done')
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
