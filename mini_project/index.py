@@ -24,13 +24,10 @@ class Index:
     def items_upload_clicked(self):
         try:
             upload = FileItemsUpload()
-            print('Before Calling CSV : ',datetime.now())
             Thread(target=upload.read_csv_file_data, name='CSV Thread').start()
             # upload.read_csv_file_data()
-            print('After Calling CSV and Before Calling Excel : ',datetime.now())
             # upload.read_excel_file_data()
             Thread(target=upload.read_excel_file_data, name='XLS Thread').start()
-            print('After Calling Excel : ',datetime.now())
             item_upload_process()
             self.window.quit()
         except Exception as e:
@@ -39,8 +36,7 @@ class Index:
 
     def display_item_details_clicked(self):
         try:
-            display = display_item_details.DisplayItemDetails()
-            display.display_details()
+            display_item_details.display_item_details()
             self.window.quit()
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())

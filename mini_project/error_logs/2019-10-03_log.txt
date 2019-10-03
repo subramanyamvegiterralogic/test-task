@@ -1,0 +1,14 @@
+2019-10-03 12:11:37.607429 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-03 12:11:37.608430 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-03 12:11:38.125795 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-03 12:11:38.125795 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-03 12:12:14.692646 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-03 12:12:14.699651 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-03 12:12:14.712661 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-03 12:12:14.712661 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-03 12:12:30.627912 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-03 12:12:30.778019 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-03 12:12:41.995949 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-03 12:12:42.213102 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-03 12:42:05.405609 : D:\PSI-1931\mytest\mini_project\database_connection.py : weakly-referenced object no longer exists
+2019-10-03 12:42:05.436630 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable

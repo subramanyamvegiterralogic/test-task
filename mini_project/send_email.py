@@ -13,13 +13,13 @@ class Transaction_email:
         self.files_dir = 'pdf_files/'
         self.error_log = error_logger.ReportError()
 
-    def send_mail(self, to_email_address, file_name):
+    def send_mail(self, to_email_address, file_name, customer_name,transaction_id):
         try:
             msg = MIMEMultipart()
             msg['From'] = self.from_email_address
             msg['To'] = to_email_address
             msg['Subject'] = 'Bill Statement'
-            body = 'Thanks For Shopping with us, Please visit again'
+            body = 'Thanks you {} For Shopping with us, Please visit again, Please find attached transaction details in the document with the transaction id : {}'.format(customer_name,transaction_id)
             msg.attach(MIMEText(body, 'plain'))
             attachment = open(str(os.path.abspath(file_name)), 'rb')
 
@@ -54,7 +54,5 @@ class Transaction_email:
 
             # Terminating the session
             s.quit()
-
-            print('Email Sending Done')
         except Exception as e:
             self.error_log.report_error_log(__file__, e.__str__())
