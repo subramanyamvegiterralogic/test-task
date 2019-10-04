@@ -5,6 +5,7 @@ from fpdf import FPDF
 import random
 import datetime, threading
 from mini_project import database_connection, working_with_mongo,send_email, error_logger
+import functools
 
 
 def display_item_details():
@@ -226,7 +227,7 @@ def display_item_details():
     customer_email_lbl.grid(row=1, column=1)
     customer_email_entry = Entry(window, text='')
     customer_email_entry.grid(row=1, column=2)
-    items_in_store_lbl = Label(window, text='Enter Customer Email', font=('bold', 15))
+    items_in_store_lbl = Label(window, text='Items Available in Store ', font=('bold', 15))
     items_in_store_lbl.grid(row=2, column=2)
     read_items_details()
     window.mainloop()

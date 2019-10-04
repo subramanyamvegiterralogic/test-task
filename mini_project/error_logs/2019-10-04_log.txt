@@ -1,0 +1,84 @@
+2019-10-04 10:19:34.335661 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:19:34.335661 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:19:34.334660 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:19:34.378691 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:19:34.379693 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:19:34.378691 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:19:34.462751 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:19:34.462751 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:19:34.462751 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:19:47.907255 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:19:47.949285 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:19:47.965296 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:19:47.984310 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:19:47.984310 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:19:47.988314 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:19:47.988314 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:19:47.993317 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:19:47.993317 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:26:21.520524 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:26:21.526541 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:26:21.530545 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 10:26:21.555549 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:26:21.555549 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:26:21.555549 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 10:26:21.581568 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:26:21.580567 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 10:26:21.581568 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 11:07:40.123796 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 11:07:40.124798 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 11:07:40.124798 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 11:07:40.130802 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 11:07:40.130802 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 11:07:40.130802 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 11:07:40.135806 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 11:07:40.135806 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 11:07:40.135806 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 12:03:45.642292 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-04 12:03:45.642292 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-04 12:03:45.643294 : D:\PSI-1931\mytest\mini_project\display_item_details.py : 'NoneType' object is not iterable
+2019-10-04 15:53:52.692711 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-04 15:53:52.876842 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-04 15:53:53.294150 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'clinic plus' for key 'PRIMARY'
+2019-10-04 15:53:53.429232 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Apple' for key 'PRIMARY'
+2019-10-04 15:53:53.440240 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'chick' for key 'PRIMARY'
+2019-10-04 15:53:53.451247 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-04 15:53:53.452249 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-04 15:53:53.497280 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-04 15:53:53.497280 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-04 15:53:53.539310 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Grapes' for key 'PRIMARY'
+2019-10-04 15:53:53.590346 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'himalaya' for key 'PRIMARY'
+2019-10-04 15:53:53.640381 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Guava' for key 'PRIMARY'
+2019-10-04 15:53:53.643385 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'pantene' for key 'PRIMARY'
+2019-10-04 15:53:53.748458 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Lemon' for key 'PRIMARY'
+2019-10-04 15:53:53.902567 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'sunsilk' for key 'PRIMARY'
+2019-10-04 15:53:53.904569 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mosambi' for key 'PRIMARY'
+2019-10-04 15:53:53.924583 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'dabur' for key 'PRIMARY'
+2019-10-04 15:53:54.035662 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mango' for key 'PRIMARY'
+2019-10-04 15:53:54.064681 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'garnier' for key 'PRIMARY'
+2019-10-04 15:53:54.091701 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Orange' for key 'PRIMARY'
+2019-10-04 15:53:54.140735 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'vatika' for key 'PRIMARY'
+2019-10-04 15:53:54.142738 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Papaya' for key 'PRIMARY'
+2019-10-04 15:53:54.161750 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Pinapple' for key 'PRIMARY'
+2019-10-04 15:53:54.189769 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'fructis' for key 'PRIMARY'
+2019-10-04 15:53:54.244809 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Promogonate' for key 'PRIMARY'
+2019-10-04 15:53:54.246811 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'tresemme' for key 'PRIMARY'
+2019-10-04 15:53:54.266824 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Sapota' for key 'PRIMARY'
+2019-10-04 15:53:54.286838 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'loreal' for key 'PRIMARY'
+2019-10-04 15:53:54.308854 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Water Melon' for key 'PRIMARY'
+2019-10-04 15:53:54.308854 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-04 15:53:54.309855 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-04 15:53:54.309855 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-04 15:53:54.309855 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-04 15:53:54.310856 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-04 15:53:54.349883 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'meera' for key 'PRIMARY'
+2019-10-04 15:53:54.349883 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-04 15:53:54.349883 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-04 15:53:54.350884 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-04 15:53:54.350884 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-04 15:53:54.350884 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-04 15:53:54.351885 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-04 15:54:12.090424 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-04 15:54:12.091426 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable
+2019-10-04 15:54:12.093428 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-04 15:54:12.093428 : D:\PSI-1931\mytest\mini_project\statisticks.py : 'NoneType' object is not iterable

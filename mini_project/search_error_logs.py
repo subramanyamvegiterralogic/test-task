@@ -14,7 +14,7 @@ class SearchErrorLogs:
 
     def create_ui(self):
         try:
-            self.get_error_from_file()
+            # self.get_error_from_file()
             self.date_lbl = Label(self.window, text='Date To Search : ', font=('Arial bold', 10))
             self.date_lbl.grid(row=0, column=0)
             self.date_entry = Entry(self.window, width=50)
@@ -68,12 +68,14 @@ class SearchErrorLogs:
                     re_genre = r'{} {}.*$'.format(search_date, hour_of_the_day)
                     regex_pattern = re.compile(re_genre)
                     new_list = list(filter(regex_pattern.match, file_data))
+                    print(new_list)
                     i = 4
                     for item in new_list:
                         self.data_label = Label(self.window, text = item.replace('\n',''))
                         self.data_label.grid(row=i, column=0)
                         i += 1
         except Exception as e:
+            print(e)
             self.data_label = Label(self.window, text='No File / Data Found')
             self.data_label.grid(row=4, column=0)
             messagebox.showinfo("No Data Found", 'File / Data Not Available')

@@ -1,4 +1,4 @@
-x = 10
+# x = 10
 class A:
     global y
     y=40
@@ -12,7 +12,12 @@ class A:
         print(y)
     print(y)
 
-a = A()
-a.print_x()
-print(x)
-print(a.x)
+# a = A()
+# a.print_x()
+# print(x)
+# print(a.x)
+
+def iterable_obj_test():
+    x = [x**2 for x in range(0,100,4)]
+    my_itr = iter(x)
+iterable_obj_test()

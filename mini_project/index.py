@@ -3,14 +3,66 @@ from tkinter import messagebox
 from mini_project import statisticks, shop_registration, display_item_details, error_logger, search_error_logs
 from mini_project.items_upload import FileItemsUpload, item_upload_process
 from threading import *
-from datetime import datetime
+import os,time
+from datetime import datetime,date,timedelta
 
 class Index:
+
+    def wait_for_tomorrow(self):
+        tomorrow = datetime.replace(datetime.now()+timedelta(days=1), hour=15, minute=11, second=0)
+        delta = tomorrow-datetime.now()
+        return delta.seconds
+
+    def delete_old_logs(self):
+        cwd = os.getcwd()
+        log_dir = str(cwd)+'/error_logs'
+        while True:
+            one_week_older = datetime.today()-timedelta(days=7)
+            if os.path.exists(log_dir):
+                files_list = os.listdir(log_dir)
+                for item in files_list:
+                    date_obj = datetime.strptime(item.split('_')[0],'%Y-%m-%d')
+                    if date_obj < one_week_older:
+                        file_name = log_dir+'/'+item
+                        if os.path.exists(file_name):
+                            os.remove(file_name)
+                            print('File Removed : ',file_name)
+                    else:
+                        pass
+            else:
+                print("Dir Doesn't Exist")
+            time.sleep(self.wait_for_tomorrow())
+
+    def delete_sent_pdfs(self):
+        cwd = os.getcwd()
+        pdf_files_dir = str(cwd)+'/pdf_files'
+        while True:
+            if os.path.exists(pdf_files_dir):
+                file_list = os.listdir(pdf_files_dir)
+                pattern = r'\d{4}-\d{2}-\d{2}.*$'
+                regex_pattern = re.compile(pattern)
+                updated_list = list(filter(regex_pattern.match, file_list))
+                for item in updated_list:
+                    if item.startswith(str(current_date)):
+                        pass
+                    else:
+                        file_name = pdf_files_dir + '/' + item
+                        if os.path.exists(file_name):
+                            os.remove(file_name)
+                            print('File Removed : ',file_name)
+            else:
+                print("Dir Doesn't Exist")
+            time.sleep(self.wait_for_tomorrow())
+
     def __init__(self):
+        global current_date
+        current_date = date.today()
         self.window = Tk()
         self.window.title('Shop Index Page')
         self.window.geometry('800x250')
         self.error_log = error_logger.ReportError()
+        Thread(target=self.delete_old_logs, name='delete_old_logs').start()
+        Thread(target=self.delete_sent_pdfs, name='delete_sent_pdfs').start()
 
     def register_clicked(self):
         try:
