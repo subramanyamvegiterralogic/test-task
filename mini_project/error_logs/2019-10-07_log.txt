@@ -1,0 +1,98 @@
+2019-10-07 11:48:36.053723 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:48:36.054711 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:48:36.054711 : D:\PSI-1931\mytest\mini_project\display_item_details.py : 'NoneType' object is not iterable
+2019-10-07 11:48:52.210145 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:48:52.210145 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:48:52.211133 : D:\PSI-1931\mytest\mini_project\display_item_details.py : 'NoneType' object is not iterable
+2019-10-07 11:48:57.859127 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:48:57.859127 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:48:57.860127 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:48:58.111305 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:48:58.111305 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:48:58.112306 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:48:59.860541 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:48:59.860541 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:48:59.861542 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:00.120725 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:00.121725 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:00.122727 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:01.866960 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:01.866960 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:01.867961 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:02.268243 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:02.268243 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:02.269244 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:04.167587 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:04.168588 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:04.168588 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:04.466798 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:04.467799 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:04.467799 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:06.467212 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:06.467212 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:06.468213 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:06.666351 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:06.666351 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:06.667353 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:08.668767 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:08.668767 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:08.669769 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:08.770840 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:08.771841 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:08.771841 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:10.672185 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:10.672185 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:10.673186 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:10.777258 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:10.777258 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:10.778259 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:12.677601 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:12.677601 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:12.678603 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:12.779673 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:12.779673 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:12.780675 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:14.681019 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:14.682019 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:14.682019 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:14.783090 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:14.783090 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:14.784091 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:16.686435 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:16.686435 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:16.687437 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:16.780516 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:16.780516 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:16.781503 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:18.695863 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:18.696858 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:18.696858 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:18.783918 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:18.783918 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:18.784919 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:20.699273 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:20.699273 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:20.700274 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:20.781330 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:20.781330 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:20.782332 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:22.708693 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:22.708693 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:22.709694 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:22.709694 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-07 11:49:22.710695 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-07 11:49:22.710695 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-07 11:49:22.710695 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-07 11:49:22.711696 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-07 11:49:22.784748 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:22.784748 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:22.785748 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:24.781159 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-07 11:49:24.782161 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-07 11:49:24.783161 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-07 11:49:24.783161 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-07 11:49:24.784161 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-07 11:49:24.784161 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-07 11:49:24.785161 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-07 11:49:24.785161 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-07 11:49:24.786162 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
