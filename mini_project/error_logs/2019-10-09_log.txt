@@ -2383,3 +2383,125 @@ ribute 'strip'
 2019-10-09 14:29:46.487550 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
 2019-10-09 14:29:46.492553 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
 2019-10-09 14:29:46.497556 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:31:46.184170 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'head and shoulders' for key 'PRIMARY'
+2019-10-09 14:31:46.184170 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:31:46.189174 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:31:46.206185 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'clinic plus' for key 'PRIMARY'
+2019-10-09 14:31:46.212191 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Banana' for key 'PRIMARY'
+2019-10-09 14:31:46.219196 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'chick' for key 'PRIMARY'
+2019-10-09 14:31:46.225200 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Grapes' for key 'PRIMARY'
+2019-10-09 14:31:46.273233 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'dove' for key 'PRIMARY'
+2019-10-09 14:31:46.278237 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Guava' for key 'PRIMARY'
+2019-10-09 14:31:46.284241 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'himalaya' for key 'PRIMARY'
+2019-10-09 14:31:46.290246 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Lemon' for key 'PRIMARY'
+2019-10-09 14:31:46.296250 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'pantene' for key 'PRIMARY'
+2019-10-09 14:31:46.302254 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mosambi' for key 'PRIMARY'
+2019-10-09 14:31:46.320268 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:31:46.326271 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:31:46.335278 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mango' for key 'PRIMARY'
+2019-10-09 14:31:46.343284 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'dabur' for key 'PRIMARY'
+2019-10-09 14:31:46.351290 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Orange' for key 'PRIMARY'
+2019-10-09 14:31:46.357294 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'garnier' for key 'PRIMARY'
+2019-10-09 14:31:46.363298 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Papaya' for key 'PRIMARY'
+2019-10-09 14:31:46.369301 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'vatika' for key 'PRIMARY'
+2019-10-09 14:31:46.375307 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Pinapple' for key 'PRIMARY'
+2019-10-09 14:31:46.381310 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'fructis' for key 'PRIMARY'
+2019-10-09 14:31:46.388315 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Promogonate' for key 'PRIMARY'
+2019-10-09 14:31:46.395320 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'tresemme' for key 'PRIMARY'
+2019-10-09 14:31:46.402325 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Sapota' for key 'PRIMARY'
+2019-10-09 14:31:46.408330 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'loreal' for key 'PRIMARY'
+2019-10-09 14:31:46.414333 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Water Melon' for key 'PRIMARY'
+2019-10-09 14:31:46.420338 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:31:46.420338 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'meera' for key 'PRIMARY'
+2019-10-09 14:31:46.426342 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:31:46.426342 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:31:46.431345 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:31:46.431345 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:31:46.436349 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:31:46.436349 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:31:46.441353 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:31:46.442354 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:31:46.447357 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:31:46.452361 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:32:36.515753 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Apple' for key 'PRIMARY'
+2019-10-09 14:32:36.524760 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Banana' for key 'PRIMARY'
+2019-10-09 14:32:36.553780 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Grapes' for key 'PRIMARY'
+2019-10-09 14:32:36.563787 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Guava' for key 'PRIMARY'
+2019-10-09 14:32:36.564788 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:32:36.568790 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:32:36.578798 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'clinic plus' for key 'PRIMARY'
+2019-10-09 14:32:36.586803 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:32:36.593808 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:32:36.645846 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'chick' for key 'PRIMARY'
+2019-10-09 14:32:36.651849 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mosambi' for key 'PRIMARY'
+2019-10-09 14:32:36.661856 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'dove' for key 'PRIMARY'
+2019-10-09 14:32:36.667860 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mango' for key 'PRIMARY'
+2019-10-09 14:32:36.675867 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'himalaya' for key 'PRIMARY'
+2019-10-09 14:32:36.681872 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Orange' for key 'PRIMARY'
+2019-10-09 14:32:36.691878 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'pantene' for key 'PRIMARY'
+2019-10-09 14:32:36.697883 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Papaya' for key 'PRIMARY'
+2019-10-09 14:32:36.703886 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'sunsilk' for key 'PRIMARY'
+2019-10-09 14:32:36.711892 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Pinapple' for key 'PRIMARY'
+2019-10-09 14:32:36.718898 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'dabur' for key 'PRIMARY'
+2019-10-09 14:32:36.725902 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Promogonate' for key 'PRIMARY'
+2019-10-09 14:32:36.732907 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'garnier' for key 'PRIMARY'
+2019-10-09 14:32:36.740913 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Sapota' for key 'PRIMARY'
+2019-10-09 14:32:36.746917 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'vatika' for key 'PRIMARY'
+2019-10-09 14:32:36.752921 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Water Melon' for key 'PRIMARY'
+2019-10-09 14:32:36.759926 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:32:36.759926 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'fructis' for key 'PRIMARY'
+2019-10-09 14:32:36.765930 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:32:36.767933 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'tresemme' for key 'PRIMARY'
+2019-10-09 14:32:36.772945 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:32:36.774938 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'loreal' for key 'PRIMARY'
+2019-10-09 14:32:36.778939 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:32:36.780941 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'meera' for key 'PRIMARY'
+2019-10-09 14:32:36.784943 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:32:36.784943 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:32:36.790947 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:32:36.795951 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:32:36.800955 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:32:36.805958 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:32:36.810961 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:35:29.963374 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Apple' for key 'PRIMARY'
+2019-10-09 14:35:29.977384 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:35:29.983388 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:35:29.989392 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Grapes' for key 'PRIMARY'
+2019-10-09 14:35:29.999399 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Guava' for key 'PRIMARY'
+2019-10-09 14:35:30.001400 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:35:30.005403 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:35:30.012408 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Lemon' for key 'PRIMARY'
+2019-10-09 14:35:30.022415 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:35:30.028419 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:35:30.036425 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mosambi' for key 'PRIMARY'
+2019-10-09 14:35:30.082457 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'chick' for key 'PRIMARY'
+2019-10-09 14:35:30.088462 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Mango' for key 'PRIMARY'
+2019-10-09 14:35:30.110477 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'dove' for key 'PRIMARY'
+2019-10-09 14:35:30.132493 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Orange' for key 'PRIMARY'
+2019-10-09 14:35:30.149505 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'himalaya' for key 'PRIMARY'
+2019-10-09 14:35:30.155510 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Papaya' for key 'PRIMARY'
+2019-10-09 14:35:30.161513 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'pantene' for key 'PRIMARY'
+2019-10-09 14:35:30.168519 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'sunsilk' for key 'PRIMARY'
+2019-10-09 14:35:30.177525 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Pinapple' for key 'PRIMARY'
+2019-10-09 14:35:30.186531 : D:\PSI-1931\mytest\mini_project\database_connection.py : No result set to fetch from.
+2019-10-09 14:35:30.187533 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'dabur' for key 'PRIMARY'
+2019-10-09 14:35:30.191535 : D:\PSI-1931\mytest\mini_project\items_upload.py : object of type 'NoneType' has no len()
+2019-10-09 14:35:30.200542 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Sapota' for key 'PRIMARY'
+2019-10-09 14:35:30.207546 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'Water Melon' for key 'PRIMARY'
+2019-10-09 14:35:30.213550 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:35:30.219555 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:35:30.225560 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:35:30.231563 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:35:30.232564 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'garnier' for key 'PRIMARY'
+2019-10-09 14:35:30.236567 : D:\PSI-1931\mytest\mini_project\items_upload.py : list index out of range
+2019-10-09 14:35:30.245573 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'vatika' for key 'PRIMARY'
+2019-10-09 14:35:30.253578 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'fructis' for key 'PRIMARY'
+2019-10-09 14:35:30.260583 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'tresemme' for key 'PRIMARY'
+2019-10-09 14:35:30.267589 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'loreal' for key 'PRIMARY'
+2019-10-09 14:35:30.275594 : D:\PSI-1931\mytest\mini_project\database_connection.py : 1062 (23000): Duplicate entry 'meera' for key 'PRIMARY'
+2019-10-09 14:35:30.280598 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:35:30.285602 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:35:30.290605 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:35:30.295609 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:35:30.300612 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'
+2019-10-09 14:35:30.306616 : D:\PSI-1931\mytest\mini_project\items_upload.py : 'float' object has no attribute 'strip'

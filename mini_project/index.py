@@ -21,7 +21,6 @@ class Index:
             cwd = os.getcwd()
             files_dir = str(cwd)+'/input_files'
             while True:
-                print('Hai Hello Namastay...!')
                 if os.path.exists(files_dir):
                     files_list = os.listdir(files_dir)
                     pattern = r'^{}.*(.xls|.csv)'.format(datetime.now().strftime('%Y-%m-%d'))
@@ -35,7 +34,7 @@ class Index:
                             Thread(target=upload.read_excel_file_data, args=(file,), name='XLS Thread').start()
                 else:
                     print('Not Found')
-                time.sleep(2*60)
+                time.sleep(12*60*60)
         except Exception as e:
             print(e)
 
