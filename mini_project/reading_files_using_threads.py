@@ -8,8 +8,8 @@ import numpy
 
 def read_excel():
     try:
-        # data = pd.read_excel(os.path.abspath(r"add_items.xlsx"))
-        # data = pd.read_excel(os.path.abspath("add_items.xls"))
+        # data = pd.read_excel(os.path.abspath(r"2019-10-09_add_items.xlsx"))
+        # data = pd.read_excel(os.path.abspath("2019-10-09_add_items.xls"))
         # df = pd.DataFrame(data, columns=['shop_id','item_name'])
         df = pd.read_excel(os.path.abspath(r"add_items.xls"), sheet_name="Sheet1")
         # print(df.columns)
@@ -21,7 +21,7 @@ def read_excel():
         # print(item_name)
         # print(item_amount)
         # print(shop_id)
-        # wb = openpyxl.load_workbook(os.path.abspath("add_items.xlsx"))
+        # wb = openpyxl.load_workbook(os.path.abspath("2019-10-09_add_items.xlsx"))
         # sheet = wb.active
         # for value in sheet.iter_rows(min_row=3, max_row=sheet.max_row, min_col=1, max_col=3, values_only=True):
         #     print(value)

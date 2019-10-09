@@ -13,6 +13,47 @@ class Index:
         delta = tomorrow-datetime.now()
         return delta.seconds
 
+    def return_pattern(self, pattern):
+        return re.compile(pattern)
+
+    def read_files_from_input_dir(self):
+        try:
+            cwd = os.getcwd()
+            files_dir = str(cwd)+'/input_files'
+            while True:
+                print('Hai Hello Namastay...!')
+                if os.path.exists(files_dir):
+                    files_list = os.listdir(files_dir)
+                    pattern = r'^{}.*(.xls|.csv)'.format(datetime.now().strftime('%Y-%m-%d'))
+                    regex_pattern = self.return_pattern(pattern)
+                    required_files_list = list(filter(regex_pattern.match, files_list))
+                    upload = FileItemsUpload()
+                    for file in required_files_list:
+                        if (re.fullmatch(r'^.*.csv$', file)) != None:
+                            Thread(target=upload.read_csv_file_data, args=(file,), name='CSV Thread').start()
+                        elif (re.fullmatch(r'^.*.xls$', file)) != None:
+                            Thread(target=upload.read_excel_file_data, args=(file,), name='XLS Thread').start()
+                else:
+                    print('Not Found')
+                time.sleep(2*60)
+        except Exception as e:
+            print(e)
+
+    def delete_old_files_from_input_dir(self):
+        cwd = os.getcwd()
+        files_dir = str(cwd)+'/input_files/'
+        while True:
+            if os.path.exists(files_dir):
+                files_list = os.listdir(files_dir)
+                for file in files_list:
+                    if re.match('^(?!{}).*'.format(datetime.now().strftime('%Y-%m-%d')),file):
+                        file_full_name = str(files_dir+file)
+                        os.remove(file_full_name)
+                        # print('Deleted File Name : ',file_full_name)
+            else:
+                print('DIR Does niot exist')
+            time.sleep(self.wait_for_tomorrow())
+
     def delete_old_logs(self):
         cwd = os.getcwd()
         log_dir = str(cwd)+'/error_logs'
@@ -63,6 +104,8 @@ class Index:
         self.error_log = error_logger.ReportError()
         Thread(target=self.delete_old_logs, name='delete_old_logs').start()
         Thread(target=self.delete_sent_pdfs, name='delete_sent_pdfs').start()
+        Thread(target=self.delete_old_files_from_input_dir, name='delete_old_files_from_input_dir').start()
+        Thread(target=self.read_files_from_input_dir, name='read_files_from_input_dir').start()
 
     def register_clicked(self):
         try:
@@ -75,11 +118,9 @@ class Index:
 
     def items_upload_clicked(self):
         try:
-            upload = FileItemsUpload()
-            Thread(target=upload.read_csv_file_data, name='CSV Thread').start()
+
             # upload.read_csv_file_data()
             # upload.read_excel_file_data()
-            Thread(target=upload.read_excel_file_data, name='XLS Thread').start()
             item_upload_process()
             self.window.quit()
         except Exception as e:

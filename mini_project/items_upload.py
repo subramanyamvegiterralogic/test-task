@@ -30,9 +30,10 @@ class FileItemsUpload:
         # finally:
         #     db.disconnect_db()
 
-    def read_csv_file_data(self):
+    def read_csv_file_data(self,file_name):
         try:
-            with open('add_items.csv', 'r') as f:
+            file_name = 'input_files/'+file_name
+            with open(str(file_name), 'r') as f:
                 data = csv.reader(f)
                 for row in data:
                     try:
@@ -40,7 +41,7 @@ class FileItemsUpload:
                     except Exception as e:
                         error_log.report_error_log(__file__, e.__str__())
                         continue
-                    print(current_thread().getName())
+                    # print(current_thread().getName())
                     # time.sleep(2)
         except FileNotFoundError as fne:
             print(fne)
@@ -51,9 +52,10 @@ class FileItemsUpload:
         except Exception as e:
             error_log.report_error_log(__file__, e.__str__())
 
-    def read_excel_file_data(self):
+    def read_excel_file_data(self, file_name):
         try:
-            data = pd.read_excel(os.path.abspath('add_items.xls'), sheet_name='Sheet1')
+            file_name = 'input_files/'+file_name
+            data = pd.read_excel(os.path.abspath(file_name), sheet_name='Sheet1')
             shop_id = data['shop_id']
             item_name = data['item_name']
             item_amount = data['item_amount']
@@ -66,13 +68,13 @@ class FileItemsUpload:
                         name_flag = True
                     if (str(amount).lower() !='nan'):
                         amount_flag = True
-
                     if (id_flag and name_flag and amount_flag):
                         self.save_file_items_details_to_db(s_id, name, amount)
-                        print(current_thread().getName())
+                        # print(current_thread().getName())
                     else:
                         continue
                 except Exception as e:
+                    # print(e)
                     error_log.report_error_log(__file__, e.__str__())
                     continue
                 # time.sleep(2)
@@ -83,6 +85,7 @@ class FileItemsUpload:
             print(fee)
             error_log.report_error_log(__file__, fee.__str__())
         except Exception as e:
+            print(e)
             error_log.report_error_log(__file__, e.__str__())
 
 def item_upload_process():
