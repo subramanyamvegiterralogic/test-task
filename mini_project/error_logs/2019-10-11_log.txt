@@ -1,0 +1,57 @@
+2019-10-11 10:50:51.113955 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:51.113955 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:51.114957 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:51.115957 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:53.119372 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:53.119372 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:53.129380 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:53.129380 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:55.122789 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:55.122789 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:55.132796 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:55.132796 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:57.133210 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:57.133210 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:57.134212 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:57.134212 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:59.148648 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:59.148648 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:50:59.148648 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:50:59.149637 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:01.152051 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:01.152051 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:01.152051 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:01.153053 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:03.156468 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:03.156468 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:03.156468 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:03.157470 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:05.162887 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:05.162887 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:05.163889 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:05.163889 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:07.167304 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:07.167304 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:07.168306 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:07.168306 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:09.170721 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:09.170721 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:09.171722 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:09.171722 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:11.174136 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:11.174136 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:11.175138 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:11.175138 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:13.174551 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:13.174551 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:13.174551 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:13.175552 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:15.179970 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:15.179970 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:15.180971 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:15.180971 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:51:17.184385 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:51:17.184385 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:52:53.479462 : D:\PSI-1931\mytest\mini_project\database_connection.py : 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+2019-10-11 10:52:53.479462 : D:\PSI-1931\mytest\mini_project\database_connection.py : name 'my_cursor' is not defined
+2019-10-11 10:52:53.480464 : D:\PSI-1931\mytest\mini_project\display_item_details.py : 'NoneType' object is not iterable

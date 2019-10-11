@@ -1,17 +1,18 @@
 from tkinter import *
-from tkinter import messagebox
 from mini_project import statisticks, shop_registration, display_item_details, error_logger, search_error_logs
-from mini_project.items_upload import FileItemsUpload, item_upload_process
+from mini_project.items_upload import FileItemsUpload, item_upload_process, my_logger
 from threading import *
 import os,time
 from datetime import datetime,date,timedelta
 
 class Index:
-
     def wait_for_tomorrow(self):
-        tomorrow = datetime.replace(datetime.now()+timedelta(days=1), hour=15, minute=11, second=0)
-        delta = tomorrow-datetime.now()
-        return delta.seconds
+        try:
+            tomorrow = datetime.replace(datetime.now()+timedelta(days=1), hour=15, minute=11, second=0)
+            delta = tomorrow-datetime.now()
+            return delta.seconds
+        except Exception as e:
+            my_logger.logging_operation(e.__str__())
 
     def return_pattern(self, pattern):
         return re.compile(pattern)
@@ -36,63 +37,72 @@ class Index:
                     print('Not Found')
                 time.sleep(12*60*60)
         except Exception as e:
-            print(e)
+            my_logger.logging_operation( e.__str__())
 
     def delete_old_files_from_input_dir(self):
-        cwd = os.getcwd()
-        files_dir = str(cwd)+'/input_files/'
-        while True:
-            if os.path.exists(files_dir):
-                files_list = os.listdir(files_dir)
-                for file in files_list:
-                    if re.match('^(?!{}).*'.format(datetime.now().strftime('%Y-%m-%d')),file):
-                        file_full_name = str(files_dir+file)
-                        os.remove(file_full_name)
-                        # print('Deleted File Name : ',file_full_name)
-            else:
-                print('DIR Does niot exist')
-            time.sleep(self.wait_for_tomorrow())
+        try:
+            cwd = os.getcwd()
+            files_dir = str(cwd)+'/input_files/'
+            while True:
+                if os.path.exists(files_dir):
+                    files_list = os.listdir(files_dir)
+                    for file in files_list:
+                        if re.match('^(?!{}).*'.format(datetime.now().strftime('%Y-%m-%d')),file):
+                            file_full_name = str(files_dir+file)
+                            os.remove(file_full_name)
+                            # print('Deleted File Name : ',file_full_name)
+                else:
+                    print('DIR Does niot exist')
+                time.sleep(self.wait_for_tomorrow())
+        except Exception as e:
+            my_logger.logging_operation(e.__str__())
 
     def delete_old_logs(self):
-        cwd = os.getcwd()
-        log_dir = str(cwd)+'/error_logs'
-        while True:
-            one_week_older = datetime.today()-timedelta(days=7)
-            if os.path.exists(log_dir):
-                files_list = os.listdir(log_dir)
-                for item in files_list:
-                    date_obj = datetime.strptime(item.split('_')[0],'%Y-%m-%d')
-                    if date_obj < one_week_older:
-                        file_name = log_dir+'/'+item
-                        if os.path.exists(file_name):
-                            os.remove(file_name)
-                            print('File Removed : ',file_name)
-                    else:
-                        pass
-            else:
-                print("Dir Doesn't Exist")
-            time.sleep(self.wait_for_tomorrow())
+        try:
+            cwd = os.getcwd()
+            log_dir = str(cwd)+'/error_logs'
+            while True:
+                one_week_older = datetime.today()-timedelta(days=7)
+                if os.path.exists(log_dir):
+                    files_list = os.listdir(log_dir)
+                    for item in files_list:
+                        date_obj = datetime.strptime(item.split('_')[0],'%Y-%m-%d')
+                        if date_obj < one_week_older:
+                            file_name = log_dir+'/'+item
+                            if os.path.exists(file_name):
+                                os.remove(file_name)
+                                print('File Removed : ',file_name)
+                        else:
+                            pass
+                else:
+                    print("Dir Doesn't Exist")
+                time.sleep(self.wait_for_tomorrow())
+        except Exception as e:
+            my_logger.logging_operation(e.__str__())
 
     def delete_sent_pdfs(self):
-        cwd = os.getcwd()
-        pdf_files_dir = str(cwd)+'/pdf_files'
-        while True:
-            if os.path.exists(pdf_files_dir):
-                file_list = os.listdir(pdf_files_dir)
-                pattern = r'\d{4}-\d{2}-\d{2}.*$'
-                regex_pattern = re.compile(pattern)
-                updated_list = list(filter(regex_pattern.match, file_list))
-                for item in updated_list:
-                    if item.startswith(str(current_date)):
-                        pass
-                    else:
-                        file_name = pdf_files_dir + '/' + item
-                        if os.path.exists(file_name):
-                            os.remove(file_name)
-                            print('File Removed : ',file_name)
-            else:
-                print("Dir Doesn't Exist")
-            time.sleep(self.wait_for_tomorrow())
+        try:
+            cwd = os.getcwd()
+            pdf_files_dir = str(cwd)+'/pdf_files'
+            while True:
+                if os.path.exists(pdf_files_dir):
+                    file_list = os.listdir(pdf_files_dir)
+                    pattern = r'\d{4}-\d{2}-\d{2}.*$'
+                    regex_pattern = re.compile(pattern)
+                    updated_list = list(filter(regex_pattern.match, file_list))
+                    for item in updated_list:
+                        if item.startswith(str(current_date)):
+                            pass
+                        else:
+                            file_name = pdf_files_dir + '/' + item
+                            if os.path.exists(file_name):
+                                os.remove(file_name)
+                                print('File Removed : ',file_name)
+                else:
+                    print("Dir Doesn't Exist")
+                time.sleep(self.wait_for_tomorrow())
+        except Exception as e:
+            my_logger.logging_operation(e.__str__())
 
     def __init__(self):
         global current_date
