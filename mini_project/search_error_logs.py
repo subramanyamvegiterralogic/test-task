@@ -61,14 +61,19 @@ class SearchErrorLogs:
             search_date = self.date_entry.get()
             hour_of_the_day = self.time_entry.get()
             if self.check_validation(search_date,hour_of_the_day):
-                error_dir_name = 'error_logs/'
-                error_file_name = error_dir_name + search_date + "_log.txt"
+                # error_dir_name = 'error_logs/'
+                # error_file_name = error_dir_name + search_date + "_log.txt"
+                error_file_name = "exception.log"
                 with open(os.path.abspath(error_file_name), 'r') as read_f:
                     file_data = read_f.readlines()
+                    print(len(file_data))
                     re_genre = r'{} {}.*$'.format(search_date, hour_of_the_day)
                     regex_pattern = re.compile(re_genre)
                     new_list = list(filter(regex_pattern.match, file_data))
+                    # new_list = list(filter(lambda x : re.compile(re_genre).match(), file_data))
+                    # new_list = list(filter(lambda x : regex_pattern.match, file_data))
                     print(new_list)
+                    print(len(new_list))
                     i = 4
                     for item in new_list:
                         self.data_label = Label(self.window, text = item.replace('\n',''))

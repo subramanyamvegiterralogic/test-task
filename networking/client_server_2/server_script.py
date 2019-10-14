@@ -2,10 +2,10 @@ import sys
 import socket
 import select
 
-HOST = ''
+HOST = socket.gethostname()
 SOCKET_LIST = []
 RECV_BUFFER = 4096
-PORT = 9009
+PORT = 586
 
 
 def chat_server():
@@ -57,7 +57,7 @@ def chat_server():
                     broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr)
                     continue
 
-    server_socket.close()
+    # server_socket.close()
 
 
 # broadcast chat messages to all connected clients

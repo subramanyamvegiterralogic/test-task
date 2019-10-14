@@ -6,7 +6,5 @@ def logging_operation(message):
         logger = logging.getLogger()
         logger.setLevel(logging.DEBUG)
         logger.error(message)
-        print('Log data addecd')
     except Exception as e:
-        print('Exceprion Raised')
         print(e)

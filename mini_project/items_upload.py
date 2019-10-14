@@ -1,10 +1,11 @@
 from tkinter import *
 from tkinter import messagebox
 import csv, os
-from mini_project import database_connection,my_logger
+from mini_project import database_connection,my_logger, error_logger
 import pandas as pd
 
 db = database_connection.Database()
+error_log = error_logger.ReportError()
 class FileItemsUpload:
     def save_file_items_details_to_db(self,shop_id_txt, item_name_txt, item_amount_txt):
         try:
@@ -22,8 +23,10 @@ class FileItemsUpload:
                     db.insert_or_update_query(query)
             except Exception as e:
                 my_logger.logging_operation(e.__str__())
+                error_log.report_error_log(__file__, e.__str__())
         except Exception as e:
             my_logger.logging_operation( e.__str__())
+            error_log.report_error_log(__file__, e.__str__())
         # finally:
         #     db.disconnect_db()
 
@@ -43,11 +46,14 @@ class FileItemsUpload:
         except FileNotFoundError as fne:
             print(fne)
             my_logger.logging_operation( fne.__str__())
+            error_log.report_error_log(__file__, e.__str__())
         except FileExistsError as fee:
             print(fee)
             my_logger.logging_operation( fee.__str__())
+            error_log.report_error_log(__file__, e.__str__())
         except Exception as e:
             my_logger.logging_operation( e.__str__())
+            error_log.report_error_log(__file__, e.__str__())
 
     def read_excel_file_data(self, file_name):
         try:
@@ -73,17 +79,21 @@ class FileItemsUpload:
                 except Exception as e:
                     # print(e)
                     my_logger.logging_operation( e.__str__())
+                    error_log.report_error_log(__file__, e.__str__())
                     continue
                 # time.sleep(2)
         except FileNotFoundError as fne:
             print(fne)
             my_logger.logging_operation( fne.__str__())
+            error_log.report_error_log(__file__, e.__str__())
         except FileExistsError as fee:
             print(fee)
             my_logger.logging_operation( fee.__str__())
+            error_log.report_error_log(__file__, e.__str__())
         except Exception as e:
             print(e)
             my_logger.logging_operation( e.__str__())
+            error_log.report_error_log(__file__, e.__str__())
 
 def item_upload_process():
     try:
@@ -131,10 +141,12 @@ def item_upload_process():
                             messagebox.showinfo('Update Item', 'Item Data Updated Successfully...')
                     except Exception as e:
                         my_logger.logging_operation( e.__str__())
+                        error_log.report_error_log(__file__, e.__str__())
                 else:
                     messagebox.showerror('Add Item', 'User Cancelled Adding Item')
             except Exception as e:
                 my_logger.logging_operation( e.__str__())
+                error_log.report_error_log(__file__, e.__str__())
 
         def add_item_clicked():
             try:
@@ -158,6 +170,7 @@ def item_upload_process():
         window.mainloop()
     except Exception as e:
         my_logger.logging_operation( e.__str__())
+        error_log.report_error_log(__file__, e.__str__())
 
 # upload = FileItemsUpload()
 # upload.read_csv_file_data()

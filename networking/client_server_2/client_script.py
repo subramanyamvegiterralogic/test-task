@@ -11,8 +11,8 @@ def chat_client():
     # host = sys.argv[1]
     # port = int(sys.argv[2])
 
-    host  = ''
-    port = 9009
+    host  = socket.gethostname()
+    port = 586
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(2)
 
@@ -27,7 +27,8 @@ def chat_client():
     sys.stdout.flush()
 
     while 1:
-        socket_list = [sys.stdin, s]
+        # socket_list = [sys.stdin, s]
+        socket_list = [s]
 
         # Get the list sockets which are readable
         ready_to_read, ready_to_write, in_error = select.select(socket_list, [], [])
@@ -54,4 +55,5 @@ def chat_client():
 
 
 if __name__ == "__main__":
-    sys.exit(chat_client())
+    # sys.exit(chat_client())
+    chat_client()
