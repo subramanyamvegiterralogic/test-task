@@ -72,11 +72,13 @@ def display_item_details():
             item_quantity_txt = item_quantity.get()
             if len(item_name_txt) < 1:
                 messagebox.showwarning('Add To Cart', 'Item Name Should Not be Empty')
+                assert len(item_name_txt)<1, 'Item Name Should not be empty'
             elif item_name_txt not in items_prices:
                 messagebox.showerror('Add To Cart',
                                      'Currently the Item is not availble, Please check later')
             elif len(item_quantity_txt) < 1:
                 messagebox.showwarning('Add To Cart', 'Item Quantity Should Not be Empty')
+                assert len(item_quantity_txt)<1, 'Item entity Should not be empty'
             elif int(item_quantity_txt) < 1:
                 messagebox.showwarning('Add To Cart', 'Item Quantity Should not be 0 or less')
             else:
