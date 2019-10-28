@@ -1,0 +1,58 @@
+28-10-2019 03:30:29 PM - File_logger : Debug Message
+28-10-2019 03:30:29 PM - File_logger : Info Message
+28-10-2019 03:30:29 PM - File_logger : Warning Message
+28-10-2019 03:30:29 PM - File_logger : Error Message
+28-10-2019 03:30:29 PM - File_logger : Critical Message
+28-10-2019 03:31:19 PM - LoggerFileDemo : Debug Message
+28-10-2019 03:31:19 PM - LoggerFileDemo : Info Message
+28-10-2019 03:31:19 PM - LoggerFileDemo : Warning Message
+28-10-2019 03:31:19 PM - LoggerFileDemo : Error Message
+28-10-2019 03:31:19 PM - LoggerFileDemo : Critical Message
+28-10-2019 03:32:09 PM - LoggerFileDemo : Error Message
+28-10-2019 03:32:09 PM - LoggerFileDemo : Critical Message
+28-10-2019 03:32:29 PM - LoggerFileDemo : Critical Message
+28-10-2019 03:33:02 PM - LoggerFileDemo : Debug Message
+28-10-2019 03:33:02 PM - LoggerFileDemo : Info Message
+28-10-2019 03:33:02 PM - LoggerFileDemo : Warning Message
+28-10-2019 03:33:02 PM - LoggerFileDemo : Error Message
+28-10-2019 03:33:02 PM - LoggerFileDemo : Critical Message
+28-10-2019 03:33:58 PM - LoggerFileDemo : division by zero
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 49, in test_log
+    print(10/0)
+ZeroDivisionError: division by zero
+28-10-2019 03:34:49 PM - LoggerFileDemo : division by zero
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 53, in test_log
+    print(10/0)
+ZeroDivisionError: division by zero
+28-10-2019 03:36:03 PM - LoggerFileDemo : invalid literal for int() with base 10: 'ten'
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 54, in test_log
+    print(int('ten'))
+ValueError: invalid literal for int() with base 10: 'ten'
+28-10-2019 03:36:49 PM - LoggerFileDemo : complex() arg is a malformed string
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 55, in test_log
+    print(complex('ten+10'))
+ValueError: complex() arg is a malformed string
+28-10-2019 03:37:25 PM - LoggerFileDemo : 
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 56, in test_log
+    raise FileNotFoundError
+FileNotFoundError
+28-10-2019 03:37:45 PM - LoggerFileDemo : 
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 57, in test_log
+    raise FileExistsError
+FileExistsError
+28-10-2019 03:38:42 PM - LoggerFileDemo : 
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 58, in test_log
+    raise NotADirectoryError
+NotADirectoryError
+28-10-2019 03:38:52 PM - LoggerFileDemo : 
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logger_ex1.py", line 58, in test_log
+    raise NotImplementedError
+NotImplementedError

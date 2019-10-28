@@ -1,0 +1,28 @@
+WARNING:root:Warning
+ERROR:root:Error
+CRITICAL:root:Critical
+CRITICAL:root:Critical
+ERROR:root:Error
+CRITICAL:root:Critical
+WARNING:root:Warning
+ERROR:root:Error
+CRITICAL:root:Critical
+2019-10-28 12:15:07,017 : ERROR : Error
+2019-10-28 12:15:07,023 : CRITICAL : Critical
+28-10-2019 12:19:24 PM : ERROR : Error
+28-10-2019 12:19:24 PM : CRITICAL : Critical
+28-10-2019 12:20:08 PM : DEBUG : Debug
+28-10-2019 12:20:08 PM : INFO : Info
+28-10-2019 12:20:08 PM : WARNING : Warning
+28-10-2019 12:20:08 PM : ERROR : Error
+28-10-2019 12:20:08 PM : CRITICAL : Critical
+28-10-2019 12:26:39 PM : ERROR : division by zero
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logging_ex1.py", line 17, in write_exception
+    print(10/0)
+ZeroDivisionError: division by zero
+28-10-2019 12:44:29 PM : ERROR : division by zero
+Traceback (most recent call last):
+  File "D:/PSI-1931/mytest/logging_ler/logging_ex1.py", line 18, in write_exception
+    print(10/0)
+ZeroDivisionError: division by zero
