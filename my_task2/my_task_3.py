@@ -31,13 +31,13 @@ try:
         # data_color.append(name_color_dict(key))
         color_name = name_color_dict.get(key)
         if  color_name == 'Dark Green':
-            data_color.append('rgb(0,150,0)')
+            data_color.append('rgb(0,100,0)')
         elif color_name == 'One level below dark green':
-            data_color.append('rgb(0,225,0)')
+            data_color.append('rgb(34,139,34)')
         elif color_name == 'Above Light Green':
-            data_color.append('rgb(150,255,150)')
+            data_color.append('rgb(0,200,0)')
         elif color_name == 'Light green':
-            data_color.append('rgb(229,255,229)')
+            data_color.append('rgb(144,238,144)')
         else:
             pass
 
@@ -46,8 +46,10 @@ try:
     fig = go.Figure()
     x = 0.
     y = 0.
-    width = 15.
-    height = 15.
+    width = 50.
+    height = 30.
+    # width = 15.
+    # height = 15.
     normed = squarify.normalize_sizes(data_values , width , height)
     rects = squarify.squarify(normed,x,y,width,height)
     color_brewer = data_color
@@ -64,27 +66,36 @@ try:
                 y0 = r['y'],
                 x1 = r['x']+r['dx'],
                 y1 = r['y']+r['dy'],
-                line = dict( width = 2 ),
+                # x1 = r['x'],
+                # y1 = r['y'],
+                # x0 = r['x']+r['dx'],
+                # y0 = r['y']+r['dy'],
+                line = dict( width = 1 ),
                 fillcolor = color
             )
         )
-
+        data_name = (str(data_names[pos]).replace(' ','\n')+'('+str(val)+')')
         annotations.append(
             dict(
                 x = r['x']+(r['dx']/2),
                 y = r['y']+(r['dy']/2),
-                # text = val,
-                text = str(data_names[pos])+' ('+str(val)+')',
+                # x = r['dx']+(r['x']/2),
+                # y = r['dy']+(r['y']/2),
+                text = data_name,
                 showarrow = False
             )
         )
         pos += 1
 
     # For hover text
-    fig.add_trace(go.Scatter(x = [ r['x']+(r['dx']/2) for r in rects ],
-                             y = [ r['y']+(r['dy']/2) for r in rects ],
+    fig.add_trace(go.Scatter(#x = [ r['x']+(r['dx']/2) for r in rects ],
+                             #y = [ r['y']+(r['dy']/2) for r in rects ],
+        x=[r['dx'] + (r['x'] / 2) for r in rects],
+        y=[r['dy'] + (r['y'] / 2) for r in rects],
                              text = [ str(v) for v in data_values ],
                              mode = 'text',))
+
+    fig.update_traces(textposition='top left')
 
     fig.update_layout(height=650,
                       width=1300,
@@ -92,6 +103,11 @@ try:
                       yaxis=dict(showgrid=False,zeroline=False),
                       shapes=shapes,
                       annotations=annotations,
+                      font=dict(
+                          # family="Times New Roman, BOLD",
+                          size=11,
+                          color="#FFFFFF"
+                      ),
                       hovermode='closest')
     fig.show()
 except FileNotFoundError as e:

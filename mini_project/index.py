@@ -17,6 +17,7 @@ class Index:
     def return_pattern(self, pattern):
         return re.compile(pattern)
 
+
     def read_files_from_input_dir(self):
         try:
             cwd = os.getcwd()
